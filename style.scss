@@ -13,14 +13,11 @@ body{
 .header {
     height: 80px;
     background-color: #1d2126;
-    .container {
-        height: 100%;
         .row {
-            height: 100%;
-            align-items: center
+            height: 80px;
+            align-items: center;
         }
     }
-}
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -33,6 +30,7 @@ body{
     margin-right: -15px;
 }
 .menu {
+    display: flex;
     margin-left: -15px;
     li{
         border: 2px solid transparent;
@@ -90,5 +88,70 @@ body{
         width: 25px;
         height: 20px;
         cursor: pointer;
+    }
+}
+
+@media(max-width: 1240px) {
+    .container {
+        width: 750px;
+    }
+    
+    .menu{
+        li{
+            margin-right: 5px;
+            a{
+                font-size: 12px;
+                padding: 7px 5px;
+            }
+        }
+    }
+    .search{
+        height: 25px;
+        margin-left: -5px;
+        input{
+            font-size: 12px;
+            width: 80px;
+            margin-left: 5px;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .container {
+        width: 420px;
+    }
+    .menu {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .search {
+        input{
+            width: 60px;
+        }
+    }
+}
+
+@media(max-width:425px) {
+    
+    .header{
+        .container {
+            width: 300px;
+            .row{
+                flex-direction: column;
+            }
+        }
+    }
+    .header{
+        .container {
+            .row{
+                height: 60px;
+            }
+        }
+    }
+    .hidden {
+        display: none;
+    }
+    .logo{
+        margin-top: 20px;
     }
 }
