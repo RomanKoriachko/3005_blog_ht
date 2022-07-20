@@ -596,6 +596,94 @@ body {
   margin-bottom: -2px;
 }
 
+.work {
+  background-color: #3a454d;
+}
+.work .section-header {
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+.work .section-header .header-rectangle {
+  background-color: #4e5a62;
+}
+
+.work-content {
+  min-height: 900px;
+  align-content: center;
+}
+.work-content .slider-btns {
+  text-align: center;
+}
+.work-content .slider-btns button {
+  margin-left: 0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.work-cart {
+  position: relative;
+  margin-bottom: 20px;
+}
+.work-cart:hover .plus {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+.work-cart:hover .work-cart-description {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.work-img {
+  width: 100%;
+}
+
+.plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 36px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 47, 54, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+.plus div {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.work-cart-description {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  background-color: #292f36;
+  bottom: 0px;
+  z-index: 10;
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  padding: 20px;
+  font-size: 21px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
 @media (min-width: 576px) {
   .container {
     margin: 0 auto;
@@ -644,6 +732,14 @@ body {
   .team-description > p:nth-child(2) {
     font-size: 16px;
   }
+  .work-content .slider-btns button {
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .work-cart-description {
+    font-size: 17px;
+  }
 }
 @media (min-width: 992px) {
   .menu {
@@ -681,6 +777,18 @@ body {
   }
   .team-card {
     margin-bottom: 0;
+  }
+  .work-content .section-header {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+  }
+  .work-content .slider-btns button {
+    margin-top: 50px;
+  }
+  .work-cart-description {
+    font-size: 18px;
   }
 }
 @media (min-width: 1200px) {
