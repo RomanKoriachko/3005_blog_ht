@@ -213,6 +213,95 @@ body{
     }
 }
 
+.team {
+    min-height: 650px;
+    justify-content: center;
+}
+.team-members {
+    padding: 0px;
+}
+.team-description {
+    height: 73px;
+    background-color: #e1e6ea;
+    padding: 10px 20px;
+    line-height: 26px;
+    transition: 0.3s;
+    >p:nth-child(1) {
+        @include boldText (#292f36, 30px);
+    }
+    >p:nth-child(2) {
+        font-size: 24px;
+        color: #a3a6a9;
+    }
+}
+.team-card {
+    margin-bottom: 25px;
+    &:hover .team-photo-hover { 
+        visibility: visible;
+        opacity: 1;
+        transition: 0.3s;
+    }
+    &:hover .team-description{
+        background-color: #3a454d;
+        transition: 0.3s;
+    }
+    &:hover .team-description>p{
+        color: white;
+        transition: 0.3s;
+    }
+}
+.team-photo {
+    position: relative;
+}
+.team-photo-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #fff, $alpha: 0.4);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    .team-photo-hover-btns {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+    button{
+        width: 50px;
+        height: 50px;
+        border: none;
+        background-color: #3a454d;
+        margin-right: -3px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover{
+            background-color: #55646f;
+            transition: 0.3s;
+        }
+    }
+    button:nth-child(1) {
+        background-image: url(images/twitter-sm.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    button:nth-child(2) {
+        background-image: url(images/fb-sm.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    button:nth-child(3) {
+        background-image: url(images/in-sm.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+.team-img {
+    width: 100%;
+    margin-bottom: -2px;
+}
+
 
 // Tablet sm
 @media(min-width: 576px) {
@@ -250,6 +339,16 @@ body{
             cursor: pointer;
         }
     }
+    .team-description {
+        padding: 18px;
+        line-height: 20px;
+        >p:nth-child(1) {
+            @include boldText (#292f36, 16px);
+        }
+        >p:nth-child(2) {
+            font-size: 16px;
+        }
+    }
 }
 
 
@@ -284,6 +383,14 @@ body{
     }
     .modest-right-side-block {
         margin-top: 0px;
+    }
+    .team{
+        .section-header{
+            margin-bottom: 0px;
+        }
+    }
+    .team-card {
+        margin-bottom: 0;
     }
 }
 

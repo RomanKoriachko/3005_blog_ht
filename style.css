@@ -498,6 +498,104 @@ body {
   line-height: 1;
 }
 
+.team {
+  min-height: 650px;
+  justify-content: center;
+}
+
+.team-members {
+  padding: 0px;
+}
+
+.team-description {
+  height: 73px;
+  background-color: #e1e6ea;
+  padding: 10px 20px;
+  line-height: 26px;
+  transition: 0.3s;
+}
+.team-description > p:nth-child(1) {
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #292f36;
+}
+.team-description > p:nth-child(2) {
+  font-size: 24px;
+  color: #a3a6a9;
+}
+
+.team-card {
+  margin-bottom: 25px;
+}
+.team-card:hover .team-photo-hover {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+.team-card:hover .team-description {
+  background-color: #3a454d;
+  transition: 0.3s;
+}
+.team-card:hover .team-description > p {
+  color: white;
+  transition: 0.3s;
+}
+
+.team-photo {
+  position: relative;
+}
+
+.team-photo-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+.team-photo-hover .team-photo-hover-btns {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+.team-photo-hover button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #3a454d;
+  margin-right: -3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.team-photo-hover button:hover {
+  background-color: #55646f;
+  transition: 0.3s;
+}
+.team-photo-hover button:nth-child(1) {
+  background-image: url(images/twitter-sm.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.team-photo-hover button:nth-child(2) {
+  background-image: url(images/fb-sm.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.team-photo-hover button:nth-child(3) {
+  background-image: url(images/in-sm.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.team-img {
+  width: 100%;
+  margin-bottom: -2px;
+}
+
 @media (min-width: 576px) {
   .container {
     margin: 0 auto;
@@ -533,6 +631,19 @@ body {
     width: 20px;
     cursor: pointer;
   }
+  .team-description {
+    padding: 18px;
+    line-height: 20px;
+  }
+  .team-description > p:nth-child(1) {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #292f36;
+  }
+  .team-description > p:nth-child(2) {
+    font-size: 16px;
+  }
 }
 @media (min-width: 992px) {
   .menu {
@@ -564,6 +675,12 @@ body {
   }
   .modest-right-side-block {
     margin-top: 0px;
+  }
+  .team .section-header {
+    margin-bottom: 0px;
+  }
+  .team-card {
+    margin-bottom: 0;
   }
 }
 @media (min-width: 1200px) {
