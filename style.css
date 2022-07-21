@@ -287,6 +287,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.main {
+  line-height: 26px;
+}
+
 .header {
   height: 80px;
   background-color: #1d2126;
@@ -415,7 +419,6 @@ body {
 }
 
 .modest-text {
-  line-height: 26px;
   flex-direction: row;
 }
 .modest-text .col-md-7 > p:nth-child(1) {
@@ -511,7 +514,6 @@ body {
   height: 73px;
   background-color: #e1e6ea;
   padding: 10px 20px;
-  line-height: 26px;
   transition: 0.3s;
 }
 .team-description > p:nth-child(1) {
@@ -596,19 +598,19 @@ body {
 }
 
 .team-img {
-  margin-bottom: -2px;
+  margin-bottom: -7px;
 }
 
-.work {
+.section-black {
   background-color: #3a454d;
 }
-.work .section-header {
+.section-black .section-header {
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 28px;
   font-weight: 700;
   color: white;
 }
-.work .section-header .header-rectangle {
+.section-black .section-header .header-rectangle {
   background-color: #4e5a62;
 }
 
@@ -685,11 +687,17 @@ body {
 
 .what-we-do {
   text-align: center;
-  min-height: 900px;
+  min-height: 800px;
+  align-items: center;
+  align-content: space-around;
 }
 
 .what-we-do-block {
   margin-bottom: 20px;
+}
+.what-we-do-block:hover .scale {
+  transform: scale(1.3);
+  transition: 0.5s;
 }
 .what-we-do-block > img {
   margin-bottom: 30px;
@@ -703,7 +711,38 @@ body {
 }
 .what-we-do-block > p:nth-child(3) {
   color: #abadaf;
-  line-height: 26px;
+}
+
+.scale {
+  transition: 0.3s;
+}
+
+.features {
+  min-height: 730px;
+  align-content: center;
+}
+
+.features-block {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.features-block > p:nth-child(2) {
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.features-block > p:nth-child(3) {
+  color: #b1b6ba;
+}
+.features-block:hover .features-img {
+  transform: scale(1.3);
+}
+
+.features-img {
+  transition: 0.5s ease-in-out;
 }
 
 @media (min-width: 576px) {
@@ -816,6 +855,13 @@ body {
   }
   .what-we-do-block {
     margin-bottom: 0px;
+  }
+  .features-block {
+    margin-bottom: 0px;
+  }
+  .features-block > p:nth-child(2) {
+    margin-top: 50px;
+    margin-bottom: 30px;
   }
 }
 @media (min-width: 1200px) {
