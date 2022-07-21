@@ -591,8 +591,11 @@ body {
   background-repeat: no-repeat;
 }
 
-.team-img {
+[class*=-img] {
   width: 100%;
+}
+
+.team-img {
   margin-bottom: -2px;
 }
 
@@ -610,7 +613,7 @@ body {
 }
 
 .work-content {
-  min-height: 900px;
+  min-height: 800px;
   align-content: center;
 }
 .work-content .slider-btns {
@@ -635,10 +638,6 @@ body {
   visibility: visible;
   opacity: 1;
   transition: 0.3s;
-}
-
-.work-img {
-  width: 100%;
 }
 
 .plus {
@@ -682,6 +681,29 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: 0.3s;
+}
+
+.what-we-do {
+  text-align: center;
+  min-height: 900px;
+}
+
+.what-we-do-block {
+  margin-bottom: 20px;
+}
+.what-we-do-block > img {
+  margin-bottom: 30px;
+}
+.what-we-do-block > p:nth-child(2) {
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #292f36;
+  margin-bottom: 30px;
+}
+.what-we-do-block > p:nth-child(3) {
+  color: #abadaf;
+  line-height: 26px;
 }
 
 @media (min-width: 576px) {
@@ -762,7 +784,6 @@ body {
     font-size: 32px;
     font-weight: 700;
     color: #292f36;
-    margin-bottom: 65px;
     margin-top: 0px;
   }
   .modest-btns button {
@@ -790,6 +811,12 @@ body {
   .work-cart-description {
     font-size: 18px;
   }
+  .what-we-do .section-header {
+    margin-bottom: 0;
+  }
+  .what-we-do-block {
+    margin-bottom: 0px;
+  }
 }
 @media (min-width: 1200px) {
   .search {
@@ -799,6 +826,9 @@ body {
   .search input {
     margin-left: 8px;
     width: 140px;
+  }
+  .work-content {
+    min-height: 900px;
   }
 }
 @media (max-width: 576px) {
