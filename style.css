@@ -749,6 +749,10 @@ body {
   margin-bottom: -7px;
 }
 
+.section-map {
+  margin-bottom: 30px;
+}
+
 .contacts-header {
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 20px;
@@ -801,6 +805,63 @@ body {
   border: none;
   border-radius: 5px;
   margin-top: 15px;
+  z-index: 0;
+  position: relative;
+}
+.form button::before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  -webkit-animation: glowing 20s linear infinite;
+          animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.form button:active::after {
+  background: transparent;
+}
+.form button:hover:before {
+  opacity: 1;
+}
+.form button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #23b7a4;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+}
+@-webkit-keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .input-small {
@@ -826,6 +887,41 @@ body {
 .footer-content {
   min-height: 95px;
   color: #cacdd0;
+  align-items: center;
+}
+
+.footer-copyright {
+  text-align: center;
+  line-height: 26px;
+}
+
+.footer-btns {
+  align-items: center;
+  text-align: center;
+}
+.footer-btns button {
+  background-color: transparent;
+  border: none;
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.footer-btns button:nth-child(1) {
+  background-image: url(images/twitter-sm.png);
+}
+.footer-btns button:nth-child(2) {
+  background-image: url(images/fb-sm.png);
+}
+.footer-btns button:nth-child(3) {
+  background-image: url(images/skype-sm.png);
+}
+.footer-btns button:nth-child(4) {
+  background-image: url(images/be-sm.png);
+}
+.footer-btns button:nth-child(5) {
+  background-image: url(images/in-sm.png);
 }
 
 @media (min-width: 576px) {
@@ -886,6 +982,9 @@ body {
   }
   .form button {
     margin-top: 0px;
+  }
+  .section-map {
+    margin-bottom: 50px;
   }
 }
 @media (min-width: 992px) {
@@ -958,6 +1057,15 @@ body {
   .map-header {
     margin-top: 60px;
     margin-bottom: 60px;
+  }
+  .section-map {
+    margin-bottom: 100px;
+  }
+  .footer-copyright {
+    text-align: left;
+  }
+  .footer-btns {
+    text-align: right;
   }
 }
 @media (min-width: 1200px) {
