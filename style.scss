@@ -430,7 +430,76 @@ body{
     transition: .5s ease-in-out;
     margin-bottom: -7px;
 }
+.contacts-header {
+    @include boldText(#292f36, 20px);
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+.contacts-text {
+    color: #a4aead;
+    p:nth-child(1) {
+        margin-bottom: 40px;
+    }
+    p{
+        span{
+            font-weight: bold;
+        }
+    }
+}
 
+.form {
+    min-height: 430px;
+    align-content: space-between;
+    padding: 30px;
+    background-color: white;
+    border: none;
+    input{
+        border: none;
+        border-radius: 5px;
+        background-color: #eaeef1;
+        width: 100%;
+    }
+    >div{
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    p{
+        margin-left: 8px;
+        @include boldText(#abadaf, 14px);
+    }
+    button{
+        width: 100%;
+        height: 44px;
+        background-color: #23b7a4;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-top: 15px;
+    }
+}
+.input-small {
+    height: 44px;
+    color: #abadaf;
+    padding: 10px;
+}
+.input-big{
+    height: 160px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eaeef1;
+    width: 100%;
+    padding: 10px;
+    color: #abadaf;
+}
+
+.footer {
+    background-color: #3a454d;
+}
+.footer-content {
+    min-height: 95px;
+    color: #cacdd0;
+}
 
 // Tablet sm
 @media(min-width: 576px) {
@@ -489,6 +558,11 @@ body{
     }
     .work-cart-description {
         font-size: 17px;
+    }
+    .form{
+        button{
+            margin-top: 0px;
+        }
     }
 }
 
@@ -559,6 +633,16 @@ body{
             margin-top: 50px;
             margin-bottom: 30px;
         }
+    }
+    .form {
+        margin-top: -130px;
+    }
+    .contacts-header {
+        margin-top: 60px;
+    }
+    .map-header {
+        margin-top: 60px;
+        margin-bottom: 60px;
     }
 }
 

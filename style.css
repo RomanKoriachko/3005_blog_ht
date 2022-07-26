@@ -749,6 +749,85 @@ body {
   margin-bottom: -7px;
 }
 
+.contacts-header {
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #292f36;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 40px;
+}
+
+.contacts-text {
+  color: #a4aead;
+}
+.contacts-text p:nth-child(1) {
+  margin-bottom: 40px;
+}
+.contacts-text p span {
+  font-weight: bold;
+}
+
+.form {
+  min-height: 430px;
+  align-content: space-between;
+  padding: 30px;
+  background-color: white;
+  border: none;
+}
+.form input {
+  border: none;
+  border-radius: 5px;
+  background-color: #eaeef1;
+  width: 100%;
+}
+.form > div {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.form p {
+  margin-left: 8px;
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #abadaf;
+}
+.form button {
+  width: 100%;
+  height: 44px;
+  background-color: #23b7a4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.input-small {
+  height: 44px;
+  color: #abadaf;
+  padding: 10px;
+}
+
+.input-big {
+  height: 160px;
+  border: none;
+  border-radius: 5px;
+  background-color: #eaeef1;
+  width: 100%;
+  padding: 10px;
+  color: #abadaf;
+}
+
+.footer {
+  background-color: #3a454d;
+}
+
+.footer-content {
+  min-height: 95px;
+  color: #cacdd0;
+}
+
 @media (min-width: 576px) {
   .container {
     margin: 0 auto;
@@ -804,6 +883,9 @@ body {
   }
   .work-cart-description {
     font-size: 17px;
+  }
+  .form button {
+    margin-top: 0px;
   }
 }
 @media (min-width: 992px) {
@@ -866,6 +948,16 @@ body {
   .features-block > p:nth-child(2) {
     margin-top: 50px;
     margin-bottom: 30px;
+  }
+  .form {
+    margin-top: -130px;
+  }
+  .contacts-header {
+    margin-top: 60px;
+  }
+  .map-header {
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 }
 @media (min-width: 1200px) {
