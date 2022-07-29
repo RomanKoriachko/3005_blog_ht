@@ -65,8 +65,8 @@ body{
         }
     }
 }
-.slader {
-    min-height: 660px;
+.slider {
+    min-height: 450px;
     background-image: url(images/slider-img.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -577,6 +577,25 @@ body{
     }
 }
 
+// slider-xs
+.slick-prev:before, .slick-next:before {
+    font-size: 0;
+}
+.slick-prev, .slick-next {
+    height: 0;
+    width: 0;
+}
+.slick-dots {
+    bottom: -40px;
+}
+.slick-dots li button:before {
+    color: white;
+    font-size: 10px;
+}
+.slick-dots li.slick-active button:before {
+    color: white;
+}
+
 // Tablet sm
 @media(min-width: 576px) {
     .container {
@@ -643,8 +662,46 @@ body{
     .section-map {
         margin-bottom: 50px;
     }
-}
 
+    // Slider-sm
+    .slick-slide {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .slick-prev:before, .slick-next:before {
+        // font-size: 25px;
+    }
+    .slick-prev, .slick-next {
+        height: 48px;
+        width: 48px;
+    }
+    .slick-prev:before {
+        content: "";
+        
+    }
+    .slick-prev {
+        background-image: url(images/arrow-left-sm.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        left: -30px;
+    }
+    .slick-next {
+        background-image: url(images/arrow-right-sm.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        right: -30px;
+    }
+    .slick-prev:hover, .slick-prev:focus {
+        background-image: url(images/arrow-left-sm.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .slick-next:hover, .slick-next:focus {
+        background-image: url(images/arrow-right-sm.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
 
 // Laptop md
 @media(min-width: 992px) {
@@ -660,6 +717,9 @@ body{
         input{
             width: 85px;
         }
+    }
+    .slider {
+        min-height: 660px;
     }
     .slider-header {
         @include boldText(white, 32px);
@@ -731,6 +791,21 @@ body{
     }
     .footer-btns {
         text-align: right;
+    }
+
+    // Slider md
+    .slick-prev {
+        background-image: url(images/arrow-left-md.png);
+        left: -40px;
+    }
+    .slick-next {
+        background-image: url(images/arrow-right-md.png);
+    }
+    .slick-prev:hover, .slick-prev:focus {
+        background-image: url(images/arrow-left-md.png);
+    }
+    .slick-next:hover, .slick-next:focus {
+        background-image: url(images/arrow-right-md.png);
     }
 }
 
